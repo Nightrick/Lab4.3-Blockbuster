@@ -26,11 +26,15 @@ public class DVD extends Movie{
 			System.out.println("Selection: " + i + ". " + getScenes().get(i));
 		}
 		
-		System.out.println("Scene selection: ");
+		System.out.print("Please select a scene: ");
 		sceneSelection = scnr.nextInt();
 		System.out.println ("You selected scene " + sceneSelection + ": " + getScenes().get(sceneSelection));
 	}
 	
+	@Override
+	public String toString() {
+		return "Title; " + title + " Runetime: " + runTime;
+	}
 	
 
 }

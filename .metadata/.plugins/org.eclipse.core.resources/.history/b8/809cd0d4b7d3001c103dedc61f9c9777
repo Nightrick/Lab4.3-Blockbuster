@@ -1,0 +1,31 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.junit.jupiter.api.Test;
+
+class BlockbusterJUnitTesting {
+
+	@Test
+	void testDVDInstanceCreation() {
+		
+		ArrayList<String> apeScenes = new ArrayList<>(Arrays.asList("Apes are poor", "Apes take over Planet", "Holy sh@t, the statue of liberty is an ape??"));
+		
+		DVD dvd1 = new DVD("Planet of the Apes", 183, apeScenes);
+		
+		assertEquals(dvd1.toString(), new DVD("Planet of the Apes", 183, apeScenes).toString());
+	}
+	
+	@Test
+	void testDVDTitleSetter() {
+		
+		ArrayList<String> apeScenes = new ArrayList<>(Arrays.asList("Apes are poor", "Apes take over Planet", "Holy sh@t, the statue of liberty is an ape??"));
+		
+		DVD dvd1 = new DVD("Planet of the Apes", 183, apeScenes);
+		
+		assertEquals("Planet of the Apes", dvd1.getTitle());
+	}
+	
+
+}
